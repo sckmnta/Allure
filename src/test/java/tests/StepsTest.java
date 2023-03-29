@@ -30,14 +30,24 @@ public class StepsTest {
             $(linkText(REPOSITORY)).click();
         });
 
-        step("open tab issues", () -> {
+        step("Open Tab Issues", () -> {
             $("#issues-tab").click();
         });
 
-        step("check if Issue number avaliable" + ISSUE, () -> {
+        step("Check If Issue Number Avaliable" + ISSUE, () -> {
             $(withText("#" + ISSUE)).should(Condition.exist);
         });
 
 
     }
+    @Test
+    public void annotatedStepTest() {
+        SelenideLogger.addListener("allure", new AllureSelenide());
+        WebSteps steps = new WebSteps();
+        steps.openMainPage();
+        steps.searchAndClickRepository(REPOSITORY);
+        steps.openIssuesTab();
+        steps.checkIfIssueTabAvaliableWithnumber(ISSUE);
+    }
+
 }
