@@ -2,7 +2,6 @@ package tests;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.WebDriverRunner;
-import com.codeborne.selenide.commands.TakeScreenshot;
 import io.qameta.allure.Attachment;
 import io.qameta.allure.Step;
 import org.openqa.selenium.OutputType;
@@ -35,8 +34,9 @@ public class WebSteps {
     public void checkIfIssueTabAvaliableWithnumber(int issue) {
         $(withText("#" + issue)).should(Condition.exist);
     }
+
     @Attachment(value = "Screenshot", type = "image/png", fileExtension = "png")
     public byte[] takeScreenshot() {
-        return ((TakesScreenshot)WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
+        return ((TakesScreenshot) WebDriverRunner.getWebDriver()).getScreenshotAs(OutputType.BYTES);
     }
 }

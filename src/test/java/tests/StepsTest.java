@@ -40,6 +40,7 @@ public class StepsTest {
 
 
     }
+
     @Test
     public void annotatedStepTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());

@@ -19,12 +19,12 @@ public class AttachmentsTest {
 
         step("Open Main Page", () -> {
             open("https://github.com");
-            attachment("Source",webdriver().driver().source());
+            attachment("Source", webdriver().driver().source());
         });
 
 
-
     }
+
     @Test
     public void annotatedStepTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
