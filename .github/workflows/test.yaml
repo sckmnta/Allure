@@ -4,28 +4,28 @@ on: workflow_dispatch
 
 jobs:
   test:
-    # start
+    # where to run
     runs-on: ubuntu-latest
-    # steps
+    # what to run
     steps:
-      # download repository
+      # download repo
       - uses: actions/checkout@v3
       # set java
       - uses: actions/setup-java@v3
         with:
           distribution: 'zulu'
-          java-version: '8'
+          java-version: '11'
       - uses: Xotabu4/selenoid-github-action@v2
       # run test
       - run: ./gradlew clean test -Dselenide.remote=http://localhost:4444/wd/hub
-      # download test history
+      # download history
       - uses: actions/checkout@v2
         if: always()
         continue-on-error: true
         with:
           ref: gh-pages
           path: gh-pages
-      # make report
+      # generate report
       - uses: simple-elf/allure-report-action@master
         if: always()
         with:
@@ -33,7 +33,7 @@ jobs:
           allure_results: build/allure-results
           allure_report: allure-report
           allure_history: allure-history
-      # public report
+      # publish report
       - uses: peaceiris/actions-gh-pages@v2
         if: always()
         env:
