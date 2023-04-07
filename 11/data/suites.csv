@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Fri Apr 07 19:10:48 GMT 2023","Fri Apr 07 19:10:48 GMT 2023","1","","tests.LabelsTest","","tests.LabelsTest","staticLabelsTest","Creation of Issue for authorised user",""
+"passed","Fri Apr 07 19:10:41 GMT 2023","Fri Apr 07 19:10:46 GMT 2023","4622","","tests.AttachmentsTest","","tests.AttachmentsTest","testLambdaAttachmentsTest","testLambdaAttachmentsTest()",""
+"passed","Fri Apr 07 19:10:48 GMT 2023","Fri Apr 07 19:10:48 GMT 2023","1","","tests.LabelsTest","","tests.LabelsTest","dynamicLabelsTest","Creation of Issue for authorised user",""
+"passed","Fri Apr 07 19:10:48 GMT 2023","Fri Apr 07 19:10:54 GMT 2023","5531","","tests.SelenideTest","","tests.SelenideTest","testIssueSearch","testIssueSearch()",""
+"passed","Fri Apr 07 19:10:54 GMT 2023","Fri Apr 07 19:10:57 GMT 2023","3952","","tests.StepsTest","","tests.StepsTest","annotatedStepTest","annotatedStepTest()",""
+"passed","Fri Apr 07 19:10:46 GMT 2023","Fri Apr 07 19:10:48 GMT 2023","2047","","tests.AttachmentsTest","","tests.AttachmentsTest","annotatedStepTest","annotatedStepTest()",""
+"passed","Fri Apr 07 19:10:58 GMT 2023","Fri Apr 07 19:11:02 GMT 2023","4524","","tests.StepsTest","","tests.StepsTest","testLambdaStep","testLambdaStep()",""
